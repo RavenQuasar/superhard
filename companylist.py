@@ -7,7 +7,7 @@ f = open('企业名录.csv', mode='a', encoding='utf-8', newline='')
 csv_writer = csv.DictWriter(f, fieldnames=['企业名称', '类型', '区域', '主营'])
 csv_writer.writeheader()
 
-for page in range(0, 1, 84):
+for page in range(1, 84):
     try:
         url = f'http://www.idacn.org/companys/search/p/{page}.html'
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'}
